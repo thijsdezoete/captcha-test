@@ -1,0 +1,34 @@
+<html><head><title>html seo</title></head><body>
+
+
+
+<script type="text/javascript">
+ws = new WebSocket('ws://thijsdezoete.nl:8080');
+
+ws.onopen = function() {
+    console.log('websocket open');
+}
+
+ws.onclose = function() {
+    test = new WebSocket('ws://thijsdezoete.nl:8080');
+
+    test.onclose = function() {
+        console.log('darn');
+    }
+
+    test.onopen = function() {
+        console.log('yay');
+    }
+
+}
+</script>
+
+
+Test html!
+
+
+
+
+
+
+</body></html>

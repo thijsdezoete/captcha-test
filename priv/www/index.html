@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Captcha</title>
+        <style type="text/css">
+            #captcha {
+                cursor:pointer;
+            }
+            #container{
+                width: 200px;
+                height: 80px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <img id="captcha" src="/captcha" onclick="get_new_captcha()"/>    
+        </div>
+        <form action="/captcha" method="post">
+        <p>
+          <input type="text" name="capCode" id="capCode"/>
+            <input type="submit" value="Send"/>
+        </p>
+         </form>
+    </body>
+    <script language="javascript">
+        function get_new_captcha(){
+            var d = new Date();
+            document.getElementById("captcha").setAttribute("src", "/captcha?" + d.getTime());
+        }
+        document.getElementById("capCode").focus();
+    </script>
+</html>
