@@ -1,0 +1,6 @@
+Captcha mochiweb application,
+Tutorial @ http://beebole.com/en/blog/erlang/how-to-implement-captcha-in-erlang-web-application/
+
+Added mysql in the mycaptcha.erl file to store all captcha's codes and hashes
+
+Enjoy! 
